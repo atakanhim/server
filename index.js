@@ -4,6 +4,9 @@ require("dotenv").config();
 const cors = require("cors");
 
 const { default: mongoose } = require("mongoose");
+
+mongoose.set("strictQuery", false);
+
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 // defauult route
