@@ -13,7 +13,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("server work!");
 });
-
+app.get("/downloadcv", (req, res) => {
+  res.download("./CV-AtakanHim.pdf");
+});
 //menus routes
 const menusRoutes = require("./routes/menus");
 app.use("/api/menu", menusRoutes);
